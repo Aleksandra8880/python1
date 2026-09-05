@@ -15,7 +15,7 @@ This project uses simulated outputs from a bacterial tracking experiment. It mon
 Each experiment file consists of:
 - **Header:** Contains the `event ID` and total `number of bacteria tracked`
 - **Data Rows:** Each record contains
-    - 3D momentum vectors (px, py, pz in 10^-20 kg·m/s or 10⁻²⁰ kg·m/s)
+    - 3D momentum vectors (`px`, `py`, `pz` in 10⁻²⁰ kg·m/s)
     - Integer ID representing the bacterial strain or genetic variant
 
 ---
@@ -28,6 +28,13 @@ Each experiment file consists of:
 
 ### Setup Instructions
 1. Clone the repository and navigate to the project root:
-   ```bash
-   git clone [https://github.com/Aleksandra8880/python1.git](https://github.com/Aleksandra8880/python1.git)
+```bash
+git clone https://github.com/Aleksandra8880/python1.git
 cd python1
+```
+
+## Usage
+To run the analysis script:
+```bash
+python main.py
+```
