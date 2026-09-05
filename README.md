@@ -1,25 +1,16 @@
-# Biology-Themed Project: Bacterial Movement and Populations
-## Topic
+# Monitoring Bacterial Movement and Populations
 
-This project models how different bacterial species move and proliferate under specific nutrient or stress conditions
+## Description
+This project uses simulated outputs from a bacterial tracking experiment. It monitors how different bacterial species move (motility) and reproduce (proliferation) under diverse conditions, such as nutrient availability or stress factors.
 
-The data come from simulated bacterial tracking experiments. Each simulation contains information about the number of bacteria observed, their 3D momentum  (`px`, `py`, and `pz`), and an ID corresponding to a specific bacterial strain or genetic variant.
+## Input Data Format
+Each experiment file consists of:
+- **Header:** Contains the `event ID` and total `number of bacteria tracked`
+- **Data Rows:** Each record contains
+    - 3D momentum vectors (px, py, pz in 10^-20 kg·m/s or 10⁻²⁰ kg·m/s)
+    - Integer ID representing the bacterial strain or genetic variant
 
-The bacterial strains included in the dataset are:
-
-- E. coli WT and E. coli mutant
-- Bacillus subtilis WT and Bacillus subtilis mutant
-- Pseudomonas aeruginosa WT and antibiotic-resistant Pseudomonas aeruginosa
-- Streptococcus pneumoniae and capsule-deficient Streptococcus pneumoniae
-- Mycobacterium tuberculosis and drug-resistant Mycobacterium tuberculosis
-- Salmonella enterica and Salmonella mutant
-
-## Research Questions
-
-The project will aim to answer the following questions:
-
-1. What are the average counts of each bacterial strain and their statistical uncertainties?
-
-2. Is there an asymmetry between the normal and mutant bacterial strains? If so, how large?
-
-3. Is there an asymmetry between the normal and mutant bacterial strains as a function of their momentum? 
+## Analysis Goals
+- What are the average counts of each bacterial strain and their statistical uncertainties?
+- Is there any asymmetry between the normal and the mutant strain?
+- Is there any asymmetry as a function of their momentum?
