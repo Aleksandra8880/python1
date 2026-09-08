@@ -1,7 +1,7 @@
 ## Topic
 **Monitoring bacterial movement and populations**
 
-Input file contains all three momentum components of of different bacterial strains with the corresponding bacteria population. The measurements were taken under different conditions such as: stress and nutrients. 
+Each row of the input file contains all three momentum components of different bacterial strains with the corresponding ID code. Therefore the population of all bacteria types is represented by the number of rows. We can analyse the mobility and number of each species. The measurements were taken under different conditions such as: stress and nutrients. 
 
 $$
 p = \sqrt{{p_{x}}^2 + {p_{y}}^2 + {p_{z}}^2 }
