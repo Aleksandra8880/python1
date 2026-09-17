@@ -70,38 +70,33 @@ def bacterial_momentum():
             print(f"Bacteria No. {i} Momentum: {momentum}") #prints the calculated momentum & explains what's printed
 
 def count_bacteria(bacterial_id):
-    #dataset=input("Enter the name of the file you want to work with:\n")
-    dataset="output-Set7.txt"
-    print("Here's the list of bacterias present in the experiment:\n")
-    for name in bacterial_id:
+    dataset=input("Enter the path for the file you want to work with:\n") #asks user for file path
+    print("Here's the list of bacterias present in the experiment:\n") 
+    for name in bacterial_id: #iterates over available bacterial straints & prints it
         print(f"- {bacterial_id[name]} ID {name}")
-    print()
-    bacterial_strain=input("Which bacteria are you interested into? Enter bacteria's ID (e.g. '211')\n")
-    event_count=0
-    bacteria_count=0
-    per_event_count=0
-    with open(dataset, "r") as file:
-        for line in file:
-            values=line.split()
-            if len(values)==2:
-                if per_event_count>0:
-                    event_count+=1
-                    per_event_count=0
+    print() #empty line
+    bacterial_strain=input("Which bacteria are you interested into? Enter bacteria's ID (e.g. '211')\n") #saves the straint that user choose into a variable
+    event_count=0 #sets an event counter
+    bacteria_count=0 #sets overall bacteria counter
+    per_event_count=0 #sets bacteria count per event/run/experiment
+    with open(dataset, "r") as file: #opens the data file
+        for line in file: #iterates over every line
+            values=line.split() #splits line into separate variables
+            if len(values)==2: #activated if line is a header
+                if per_event_count>0: #if there was at least one bacteria of chosen strain in the event
+                    event_count+=1 #counts an event as valid
+                    per_event_count=0 #sets the counter of bacteria per evenet back to zero
             else:
-                if bacterial_strain==values[3]:
-                    bacteria_count+=1
-                    per_event_count+=1
-        if per_event_count>0:
-            event_count+=1
-    average_count=bacteria_count/event_count
-    uncertanty=math.sqrt(average_count)
-    print(f"There is on average {average_count} ± {uncertanty} bacterias per event.")               
-    #print(f"There are {event_count} events and {bacteria_count} {bacterial_strain}")
+                if bacterial_strain==values[3]: #selects the lines with required bacteria strain
+                    bacteria_count+=1 #adds bacteria to total list of bacterias
+                    per_event_count+=1 #adds bacteria to the list of bacterias in this specific event (to check validity of event)
+        if per_event_count>0: #when the dataset is finished checks the last event
+            event_count+=1 #if there was at least one bacteria in event, adds event to list
+    average_count=bacteria_count/event_count #calculates average amount of bacteria per event by dividing total number of bacteria with number of valid events 
+    uncertanty=math.sqrt(average_count) #calculates the uncertanty - square root of mean 
+    print(f"There is on average {average_count} ± {uncertanty} bacterias per event.") #prints the output
+    print(f"There are {event_count} events and {bacteria_count} {bacterial_strain}")
 
 #bacterial_momentum()
 count_bacteria(bacterial_id)
 
-#round
-#comments
-#check
-#save to github

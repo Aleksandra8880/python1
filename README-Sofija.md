@@ -38,6 +38,9 @@ cd Monitoring-Bacterial-Movement-and-Population
 * Press green button "<> Code"
 * Click "Download ZIP"
 
+**Dataset**
+
+You can downoload the dataset files here: https://surfdrive.surf.nl/index.php/s/7udCnWTk4yMUASD 
 ## _Usage_
 1. Open the folder
 2. Run in Terminal
