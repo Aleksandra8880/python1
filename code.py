@@ -1,4 +1,4 @@
-"""Week 2 Deliverable: Read particle event data and calculate momentum magnitude."""
+"""Week 2 Deliverable: Read bacteria event data and calculate momentum magnitude."""
 # Importing important libraries
 import math
 import os
