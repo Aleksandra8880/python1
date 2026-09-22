@@ -69,7 +69,7 @@ def count_bacteria(bacterial_id): #main function
         answer_is_true=False
         while not answer_is_true: #asks for user's input until its correct
             answer=input("") 
-            if answer in bacterial_id or answer.strip().lower()=="all": #if valid input saves the answer
+            if answer.strip() in bacterial_id or answer.strip().lower()=="all": #if valid input saves the answer
                 answer_is_true=True
             else:
                 print("Incorrect index!") #warns about error
