@@ -40,7 +40,6 @@ def count_bacteria(bacterial_id): #main function
                 count={bacterial_id[name]:0 for name in bacterial_id} #creates a dictionary using dictionary comprehension (iterates over dict with bacterial names)
                 #key is name of bacteria and the initial value is 0
                 with open (file_name, "r") as file: #opens the file for reading
-                    file_exists=True #allows to exit the loop
                     for line in file: #iterates over each line
                         values=line.split() #splits the line in to separate values 
                     
@@ -53,6 +52,7 @@ def count_bacteria(bacterial_id): #main function
                             event_has_bacteria=True #indicates that there is bacteria in this event
                     if event_has_bacteria: #checks the last event
                         event_count+=1 #if there was bacteria in last event, counts the event
+                    file_exists=True #allows to exit the loop
             except FileNotFoundError:
                 print("This file doesn't exist!") #warns user
                 file_exists=False #continues the loop
