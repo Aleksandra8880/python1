@@ -22,6 +22,7 @@ $$
 - Salmonella mutant
 
 ## Research outcomes:
+```text
 For 211 the average from all files is 19.96404222526273 with standard deviation 0.03277297367603035
 For -211 the average from all files is 19.931721898491062 with standard deviation 0.031862995623137325
 For 321 the average from all files is 2.5109760539147103 with standard deviation 0.004760470013110587
@@ -41,10 +42,11 @@ Assymetry of pair (2212, -2212) is 0.009979552357054559
 Assymetry of pair (3122, -3122) is 0.008941560453470589
 Assymetry of pair (3312, -3312) is 0.00561794710944335
 Assymetry of pair (3334, -3334) is 0.01518508769949144
-
+```
 The wild strains are more present within the sample.
 
 As a part of investigation the weighted average was a also calculated, taking the event_count of each file as a weight. However, the difference between the averages was not significant. The analyzed sub-samples were all similar size, therefore this simplification is reasonable and supports the expected outcomes.
+
 ## Questions to address: ##
 - What are the average counts of each bacterial strain and their statistical uncertainties? 
 - Is there any asymmetry between the normal and the mutant strain? 
@@ -58,6 +60,7 @@ As a part of investigation the weighted average was a also calculated, taking th
 - math
 - 
 ## Example of use
+
 ## Installation
 
 ## License
