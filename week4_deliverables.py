@@ -6,6 +6,8 @@
 1 file - 1 sub sample
 '''
 import numpy as np #imports necessary library
+import statistics 
+from pathlib import Path
 
 bacterial_id={
     "211":"E. coli WT", 
@@ -33,7 +35,6 @@ def average_in_subsample(event_count, bacteria_count): #calculates the average a
 
 
 def count_bacteria_in_subsample(bacterial_id, file_name): #counts bacteria in a subsample
-    try:
         try: #accounts for error of wrong file name
             event_count=0 #initates the event count
             event_has_bacteria=False #variable to track validity of an event
@@ -55,27 +56,34 @@ def count_bacteria_in_subsample(bacterial_id, file_name): #counts bacteria in a 
                 return average_in_subsample(event_count, bacteria_count), event_count #returns a list with bacteria strain and its average per subsample
         except FileNotFoundError:
             print("This file doesn't exist!") #warns user
-            file_exists=False #continues the loop
         except:
             print("Couldn't open the file!")
-    except:
-        print("Something went wrong with counting bacteria!")
-        return
 
+def get_files():
+    files_list=[]
+    folder=Path(input("Enter the name of folder with your data files:\n").strip())
+
+    if not folder.is_dir():
+        print("Folder not found!")
+        return []
+    
+    for f in folder.iterdir():
+        if f.is_file() and f.name.startswith("output-Set") and f.name.endswith(".txt"):
+            files_list.append(f)
+    return files_list
     
 def main():
     final_avg_list={} #creates an empty dictionary 
-    files_list=[]
+    files_list=get_files()
+    if len(files_list)<2:
+        print("Need at least 2 files!")
+        return
+
     for bacteria in bacterial_id:
         final_avg_list[bacterial_id[bacteria]]=[] #adds to dict bacterial names as keys and an empty list as values
 
 
-    subsets=int(input("How many subsets (files) will you work with?\n"))
     try:
-        for nr in range(subsets):
-            file_name=input(f"Enter the pathway to the {nr+1} file you want to work with:\n") #asks user for a pathway to open the file
-            files_list.append(file_name)
-
         events=[]
         for subsample in files_list: #iterates over all files
             results, event_count =count_bacteria_in_subsample(bacterial_id, subsample) #saves in a variable the list of averages from file
@@ -90,20 +98,15 @@ def main():
     final_averages={}
     
     for name, averages in final_avg_list.items(): #iterates over the list of subsample averages per bacterial strain
-        avg=np.average(averages)
-        std=np.std(averages)
         weighted_avg=np.average(averages, weights=events)
-        if abs(avg-weighted_avg)<=std:   
-            final_averages[name]=avg, std #calculates 1 final average for each strain
-        else: 
-            print("There is significant difference in weighted and unweighted average, therefore weighted average will be used!")
-            for name2, averages2 in final_avg_list.items():
-                final_averages[name2]=np.average(averages2, weights=events), np.std(averages2)
-            break
+        std=statistics.stdev(averages)
+        final_averages[name]=weighted_avg, std
+    
 
 
     for name, value in final_averages.items():    
-        print(f"{name} average: {value[0]} ± {value[1]}")
+        print(name)
+        print(f" weighted average: {value[0]} ± {value[1]}")
     
 
 main()
