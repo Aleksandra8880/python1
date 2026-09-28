@@ -46,7 +46,9 @@ Assymetry of pair (3334, -3334) is 0.01518508769949144
 The wild strains are more present within the sample.
 
 As a part of investigation the weighted average was a also calculated, taking the event_count of each file as a weight. However, the difference between the averages was not significant. The analyzed sub-samples were all similar size, therefore this simplification is reasonable and supports the expected outcomes.
-
+```text
+weights {'output-Set1.txt': 461368, 'output-Set2.txt': 461516, 'output-Set3.txt': 461343, 'output-Set4.txt': 461322, 'output-Set5.txt': 461498, 'output-Set6.txt': 461668, 'output-Set7.txt': 461532, 'output-Set8.txt': 461543, 'output-Set9.txt': 461513, 'output-Set10.txt': 461329}
+```
 ## Questions to address: ##
 - What are the average counts of each bacterial strain and their statistical uncertainties? 
 - Is there any asymmetry between the normal and the mutant strain? 
