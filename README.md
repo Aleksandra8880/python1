@@ -45,7 +45,7 @@ For each of the 10 data files, the average bacterial count per experiment was ca
 ### Final Average 
 The final average count for each bacterial ID was calculated as the arithmetic mean of the 10 batch averages. A weighted average accounting for the different numbers of valid experiments in each batch was also calculated; however, no significant difference was found when compared to the arithmetic average. Consequently, the arithmetic mean was used for further analysis. Statistical uncertainties were estimated using subsampling. For each bacterial ID, the standard deviation of the 10 batch averages was calculated and used as the uncertainty of the final average.
 
-### Difference between Wild Type and Mutant
+### Difference between Wild-Type and Mutant
 The asymmetry between the wild-type and corresponding mutant strain was quantified as the difference in their final average counts:
 
 **Asymmetry = wild-type average − mutant average**
