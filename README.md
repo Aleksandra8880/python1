@@ -2,11 +2,11 @@
 This project analyzed simulated data from a bacterial tracking experiment under specific nutrient and stress conditions.
 
 ## Table of Contents
-- [Research Questions 🔎](#question)
+- [Research Questions 🔎](#research-question)
 - [Dataset 🧫](#dataset)
 - [Methods 💻](#methods)
 - [Results 📊](#results)
-- [Usage Instructions 📚](#instructions)
+- [Usage Instructions 📚](#usage-instructions)
 
 ## Research Questions 
 The aim of this project was to quantify the abundance of wild-type and mutant bacterial strains. The following research questions were addressed: 
@@ -84,14 +84,14 @@ The wild-type strain had a higher average count than the mutant strain for all s
 The analysis requires **Python**, **NumPy**, and **Matplotlib**. 
 
 macOS installation: 
-```python3 -m pip install numpy matplotlib```
+`python3 -m pip install numpy matplotlib`
 
 Windows installation: 
-```py -m pip install numpy matplotlib```
+`py -m pip install numpy matplotlib`
 
 Linux installation: 
-```apt-get install python3-tk```
-```python3 -m pip install numpy matplotlib```
+`apt-get install python3-tk`
+`python3 -m pip install numpy matplotlib`
 
 ***Note:** The complete dataset is approximately 8 GB. Ensure that sufficient storage space is available before downloading the files.*
 
