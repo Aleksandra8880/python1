@@ -28,8 +28,7 @@ The project will aim to answer the following questions:
 
 ## Analysis
 
-
-The sample was divided into 10 sub-samples of 500,000 events, each one was analysed separately. In total, 4,614,632 valid events were used in the analysis.
+The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each one was analysed separately. In total, 4,614,632 valid events were used in the analysis.
 
 For each bacterial strain, I calculated the average number per valid event using the full sample.
 
