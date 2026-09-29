@@ -22,7 +22,7 @@ The project will aim to answer the following questions:
 
 2. Is there an asymmetry between the normal and mutant bacterial strains? If so, how large?
 
-3. Is there an asymmetry between the normal and mutant bacterial strains as a function of their momentum? ## Week 4 - Statistical Analysis
+3. Is there an asymmetry between the normal and mutant bacterial strains as a function of their momentum? 
 
 # Week 4 - Bacteria Analysis
 
