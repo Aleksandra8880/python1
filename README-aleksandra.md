@@ -79,7 +79,7 @@ Assymetry of pair (3122, -3122) is 0.008941560453470589
 Assymetry of pair (3312, -3312) is 0.00561794710944335
 Assymetry of pair (3334, -3334) is 0.01518508769949144
 ```
-The wild strains are more present within the sample.
+The wild strains are more present within the population.
 
 As a part of investigation the weighted average was also calculated, taking the event_count of each file as a weight. However, the difference between the averages was not significant. The analyzed sub-samples were all similar size, therefore this simplification is reasonable and supports the expected outcomes.
 
