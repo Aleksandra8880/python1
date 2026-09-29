@@ -1,7 +1,7 @@
 # Bacterial Population Analysis 
 This project analyzed simulated data from a bacterial tracking experiment under specific nutrient and stress conditions.
 
-```
+``
        _______________________
     .-'                       '-.
   .'    o    .    o     .        '.
@@ -10,7 +10,7 @@ This project analyzed simulated data from a bacterial tracking experiment under 
  \    o    .      o    .      o     /
   '.     .    o      .     o      .'
     '-._________________________.-'
-```
+``
 
 ## Table of Contents
 - [Research Questions 🔎](#question)
