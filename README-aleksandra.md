@@ -27,7 +27,7 @@ $$
 
 ## Installation
 
-Link to clone the repository:
+Link to clone the repository: [repository](https://github.com/Aleksandra8880/python1.git)
 
 Analyzed files were downloaded from: [link](https://surfdrive.surf.nl/index.php/s/7udCnWTk4yMUASD)
 
