@@ -8,12 +8,12 @@ This project analyzed simulated data from a bacterial tracking experiment under 
 - [Results 📊](#results)
 - [Usage Instructions 📚](#instructions)
 
-## Research Questions 🔎
+## Research Questions 
 The aim of this project was to quantify the abundance of wild-type and mutant bacterial strains. The following research questions were addressed: 
 1. What are the average counts of each bacterial strain and their statistical uncertainties?
 2. Is there an asymmetry in the abundance between the wild-type and mutant strains? If so, is the difference statistically significant?
 
-## Dataset 🧫
+## Dataset 
 The dataset consists of 10 simulated bacterial tracking file (`output-Set1.txt` to `output-Set10.txt`), each containing 500,000 experiments. `output-Set0.txt` was excluded from the analysis. The dataset can be accessed [here](https://surfdrive.surf.nl/index.php/s/7udCnWTk4yMUASD). Each file consists of multiple experiments. Each experiment begins with a header containing the experiment code and the number of bacteria recorded in that experiment. Each row contains the three-dimensional momentum components (`px`, `py`, and `pz`) and the ID of the corresponding bacterial strain. Twelve bacterial IDs are included in the dataset, representing six bacterial species with a wild-type and mutant strain for each species.
 
 <details>
@@ -38,7 +38,7 @@ The dataset consists of 10 simulated bacterial tracking file (`output-Set1.txt` 
 
 </details>
 
-## Methods 💻
+## Methods 
 ### Average Bacterial Counts
 For each of the 10 data files, the average bacterial count per experiment was calculated separately for each bacterial ID. Invalid experiments were excluded from the analysis. **An experiment was considered valid if it contained at least one of the 12 studied bacterial IDs.** For each bacterial ID, the total bacterial count within a batch (file) was divided by the number of valid experiments in that batch (file). This resulted in 10 independent batch averages for each bacterial ID.
 
@@ -52,7 +52,7 @@ The asymmetry between the wild-type and corresponding mutant strain was quantifi
 
 The uncertainty of the asymmetry was also estimated using subsampling. For each bacterial species, the wild-type and mutant batch averages were subtracted separately, producing 10 differences. The standard deviation of these 10 differences was used as the uncertainty of the final asymmetry per each bacterial ID pair. **An asymmetry was considered statistically significant when the interval defined by the WT−mutant difference ± its uncertainty did not include zero.**
 
-## Results 📊
+## Results 
 ### Average Bacterial Counts 
 The average bacterial counts per experiment and their statistical uncertainties are shown below. Uncertainties represent the standard deviation of the 10 batch averages obtained by subsampling.
 
@@ -79,7 +79,7 @@ The difference in abundance between the wild-type and mutant strain was calculat
 
 The wild-type strain had a higher average count than the mutant strain for all six bacterial species. However, the asymmetry was considered statistically significant only when the uncertainty interval did not include zero. The differences for *E. coli*, *B. subtilis*, *P. aeruginosa*, and *S. pneumoniae* did not include zero and were therefore considered statistically significant. In contrast, the uncertainty intervals for *M. tuberculosis* and *S. enterica* included zero and were hence considered not significant.  
 
-## Usage Instructions 📚
+## Usage Instructions 
 ### Requirements 
 The analysis requires **Python 3**, **NumPy**, and **Matplotlib**. 
 
