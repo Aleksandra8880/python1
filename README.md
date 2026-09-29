@@ -81,7 +81,7 @@ The wild-type strain had a higher average count than the mutant strain for all s
 
 ## Usage Instructions 
 ### Requirements 
-The analysis requires **Python 3**, **NumPy**, and **Matplotlib**. 
+The analysis requires **Python**, **NumPy**, and **Matplotlib**. 
 
 macOS installation: 
 `python3 -m pip install numpy matplotlib`
