@@ -2,7 +2,7 @@
 This project analyzed simulated data from a bacterial tracking experiment under specific nutrient and stress conditions.
 
 ## Table of Contents
-- [Research Questions 🔎](#research-question)
+- [Research Questions 🔎](#research-questions)
 - [Dataset 🧫](#dataset)
 - [Methods 💻](#methods)
 - [Results 📊](#results)
