@@ -184,11 +184,6 @@ for filename in files:
 
             # Protection to check that the bacterial ID is a number
             try:
-
-                # data[0] = px
-                # data[1] = py
-                # data[2] = pz
-                # data[3] = bacterial ID
                 bacteria_id = int(data[3])
 
             except ValueError:
@@ -334,7 +329,7 @@ for result in included_results:
 # ------------------------------------------------------------
 
 
-print("BACTERIA ANALYSIS - DATASET 7")
+print("BACTERIA ANALYSIS - DATASETS")
 print("Number of subsamples analysed:", len(included_results))
 print("Events per subsample:", typical_events)
 print("Total events analysed:", total_events_all)
@@ -422,7 +417,7 @@ for wild_type_id in pairs:
     ) / total_valid_events
 
 
-    # Calculate the statistical uncertainty using the sub-sampling method
+    # Calculate the statistical uncertainty
     uncertainty = statistics.stdev(differences)
 
 
