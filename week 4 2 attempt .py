@@ -142,8 +142,7 @@ for filename in files:
 
             # Second value = number of bacteria in this event
             number_bacteria = int(event_data[1])
-
-        except ValueError:
+  except ValueError:
             print("Invalid event header.")
             continue
 
