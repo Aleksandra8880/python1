@@ -26,13 +26,15 @@ The project will aim to answer the following questions:
 
 ## Analysis
 
-The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each one was analysed separately. In total, 4,614,632 valid events were used in the analysis.
+The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each of which was analysed separately. In total, 4,614,632 valid events were used in the analysis. An event was considered valid if it contained at least one of the 12 bacterial IDs included in the analysis.
 
-For each bacterial strain, I calculated the average number per valid event using the full sample.
+The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. The final average for each strain was calculated as the mean of the 10 sub sample averages.
 
-The statistical uncertainty was calculated using the sub-sampling method. I calculated the average for each of the 10 sub-samples separately and used the standard deviation of these results as the statistical uncertainty.
+The statistical uncertainty was estimated using the sub-sampling method, by calculating the standard deviation of the 10 subsample averages.
 
 ## Results
+
+The average number of bacteria per valid event and the statistical uncertainty for each strain are shown below.
 
 | Bacterial strain | Average per valid event | Statistical uncertainty |
 |---|---:|---:|
@@ -51,7 +53,7 @@ The statistical uncertainty was calculated using the sub-sampling method. I calc
 
 ## Wild type vs mutant comparison
 
-The difference between the wild type and mutant strains was also calculated. The statistical uncertainty of each difference was calculated from the spread of the results from the 10 sub-samples.
+To compare the wild type and mutant strains was also calculated as: **difference= WT average - mutant average** The statistical uncertainty of each difference was calculated separately for each of the 10 sub-samples, the standard deviation of the 10 differences was used in the uncertainty.
 
 | Bacterial strains | Mean difference per valid event | Statistical uncertainty |
 |---|---:|---:|
