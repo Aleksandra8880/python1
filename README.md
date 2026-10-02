@@ -24,8 +24,6 @@ The project will aim to answer the following questions:
 
 3. Is there an asymmetry between the normal and mutant bacterial strains as a function of their momentum? 
 
-# Week 4 - Bacteria Analysis
-
 ## Analysis
 
 The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each one was analysed separately. In total, 4,614,632 valid events were used in the analysis.
