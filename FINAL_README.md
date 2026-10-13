@@ -170,7 +170,7 @@ The final code **keeps the same mean count difference**. The revised momentum pl
 For *independent Poisson counts*, the variances add even though the counts are subtracted:
 
 $$
-\operatorname{Var}(N_{\mathrm{WT}}-N_{\mathrm{variant}})
+\mathrm{Var}(N_{\mathrm{WT}}-N_{\mathrm{variant}})
 =N_{\mathrm{WT}}+N_{\mathrm{variant}}.
 $$
 
