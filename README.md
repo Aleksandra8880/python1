@@ -74,7 +74,7 @@ All 6 species showed a positive mean difference, meaning the wild type bacteria 
 The final part of the analysis investigated the difference between wild type and mutant bacteria and how it changes depending on their momentum.
 The analysis focused on  E. coli and S. pneumoniae.
 
-## calculating momentum 
+## Calculating Momentum 
 For each bacterium the total momentum was calculated from three components. 
 
 $$ 
@@ -83,7 +83,7 @@ $$
 
 The momentum values were then divided into bins between zero and 60 with E. coli having a bin width of 1 and S. pneumoniae of 2. Different bin width were used because E.coli was much more abundant then S. pneumoniae.
 
-## calculating the asymmetry 
+## Calculating the Asymmetry 
 for each momentum bin, the number of wild type and mutant bacteria was counted separately in each of the 10 files. The difference was then calculated so the final graph shows the mean WT/mutant difference across the 10 sub samples.
 
 ## Statistical Uncertainty
@@ -107,7 +107,7 @@ $$
 
 These uncertainties were displayed as error bars using plt.errorbar().
 
-## momentum analysis
+## Momentum Analysis
 For E. coli, the WT–mutant difference was largest at the lowest momentum bins. As the momentum increase the difference generally decreased. A similar pattern was observed for S. pneumoniae.
 The error bars represent the Poisson uncertainty of the mean count difference in every momentum bin
 
@@ -125,5 +125,7 @@ For E. coli and S. pneumoniae, the largest WT–mutant count differences were ob
 The statistical uncertainties were estimated using the sub-sampling method for average abundances and overall differences, and Poisson uncertainties for the momentum histograms
 
 ## Libraries used
+
 NumPy: calculations of momentum, means, and standard deviations.
+
 Matplotlib: plotting the momentum-dependent differences with statistical error bars.
