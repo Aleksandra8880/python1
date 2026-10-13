@@ -60,6 +60,9 @@ Analyzed files were downloaded from: [link](https://surfdrive.surf.nl/index.php/
 - Salmonella mutant
 
 ## Research outcomes:
+
+### Table 1: Averages
+
 | Bacteria   | Average per event  | standard deviation   |
 |------------|------------------- |--------------------- |
 | 211        |19.96404222526273   |0.03277297367603035   |
@@ -82,6 +85,8 @@ As a part of investigation the weighted average was also calculated, taking the 
 ```python
 weights {'output-Set1.txt': 461368, 'output-Set2.txt': 461516, 'output-Set3.txt': 461343, 'output-Set4.txt': 461322, 'output-Set5.txt': 461498, 'output-Set6.txt': 461668, 'output-Set7.txt': 461532, 'output-Set8.txt': 461543, 'output-Set9.txt': 461513, 'output-Set10.txt': 461329}
 ```
+
+### Table 2: Global asymmetry
 
 | Bacteria   | Asymmetry          | standard deviation   |
 |------------|------------------- |--------------------- |
@@ -122,9 +127,12 @@ Global significant asymmetry above 3 sigma was observed for all 6 pairs.
 
 
 ## Questions to address: ##
-- What are the average counts of each bacterial strain and their statistical uncertainties? 
-- Is there any asymmetry between the normal and the mutant strain? 
-- Is there any asymmetry as a function of their momentum? 
+- What are the average counts of each bacterial strain and their statistical uncertainties?
+  The results are shown in [Table 1](#averages)
+- Is there any asymmetry between the normal and the mutant strain?
+  The results are shown in [Table 2](#table-2-global-asymmetry)
+- Is there any asymmetry as a function of their momentum?
+  Graphs indicate that asymmetry is more observable in the lower momentum range, however exact trends are hard to identify.
 
 ## Libraries Used
 - python
