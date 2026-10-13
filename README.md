@@ -28,7 +28,7 @@ The project will aim to answer the following questions:
 
 The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each of which was analysed separately. In total, 4,614,632 valid events were used in the analysis.
 
-An event was considered valid if it contained at least one of the 12 recognised bacteria IDs and events and events without recognised IDs were excluded.
+An event was considered valid if it contained at least one of the 12 recognised bacteria IDs. Empty events and events without recognised IDs were excluded.
  
 The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. The final average for each strain was calculated as the mean of the 10 sub sample averages.
 
