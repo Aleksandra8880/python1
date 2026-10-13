@@ -28,9 +28,11 @@ The project will aim to answer the following questions:
 
 The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each of which was analysed separately. In total, 4,614,632 valid events were used in the analysis. An event was considered valid if it contained at least one of the 12 bacterial IDs included in the analysis.
 
-The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. The final average for each strain was calculated as the mean of the 10 sub sample averages.
+The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. $\bar{N}_i = N_{\text{strain},i} / N_{\text{valid},i}$ The final average for each strain was calculated as the mean of the 10 sub sample averages. $\bar{N} = \frac{1}{10}\sum_{i=1}^{10} \bar{N}_i$.
 
-The statistical uncertainty was estimated using the sub-sampling method, by calculating the standard deviation of the 10 subsample averages.
+The statistical uncertainty was estimated using the sub-sampling method, by calculating the standard deviation of the 10 subsample averages. $\sigma = \sqrt{\frac{1}{9}\sum_{i=1}^{10}(\bar{N}_i - \bar{N})^2}$. we divide by 10-1= 9 because the mean is calculated from the same 10 values.
+
+to study asymmetry as a function of momentum, the total momentum of every bacterium was calculated: $p = \sqrt{p_x^2 + p_y^2 + p_z^2}$ and grouped into bins from 0 to 60. in every bin the asymmetry was calculated for each subsample; their plotted point is the mean of the 10 values and the standard deviation as the error bar. 
 
 ## Results
 
