@@ -2,7 +2,9 @@
 
 **PRA2003 - Python Group 1**
 
-This project analyses simulated bacterial tracking data to compare the abundance and momentum distributions of wild-type (WT) bacteria with their mutant or resistant variants. It uses ten subsamples to investigate whether differences are consistent across the data.
+This project is about monitoring bacterial movement and populations using simulated data from bacterial tracking experiments, where bacterial movement and proliferation under specific nutrient or stress conditions are modelled by the simulation.
+
+The analysis compares different bacterial strains and genetic variants to investigate their abundance and determine whether there are differences between normal and mutant strains.
 
 ## Contents
 
@@ -27,9 +29,11 @@ This project analyses simulated bacterial tracking data to compare the abundance
 3. How does the WT–variant difference change with momentum?
 
 ## Data and bacterial strains
+Each input file represents simulated output from bacterial tracking experiments. The header of each event contains an event ID and the number of bacterial cells in that event, while the following rows contain the three-dimensional momentum components `px`, `py` and `pz`, together with an integer ID identifying the bacterial strain or genetic variant.
 
-The input files are `output-Set1.txt` to `output-Set10.txt`. Each file contains event headers with the event number and number of particles, followed by particle rows containing `px py pz bacterial_id`. `output-Set0.txt` is excluded because it contains only one event.
+For this analysis, a total of **5,000,000 events** were used, divided into **10 sub-samples of 500,000 events each**. Although `output-Set0.txt` was also present in the dataset folder, it contains only one event and therefore does not match the size of the other sub-samples, so it was not included in the final analysis or uncertainty calculation.
 
+Of the 5,000,000 events analysed, **4,614,632 were valid events**: they contained at least one bacterial ID from the selected strains.
 | Species | WT ID | Variant ID | Variant description |
 |---|---:|---:|---|
 | *Escherichia coli* | 211 | -211 | Mutant |
@@ -51,7 +55,7 @@ Install Matplotlib in a terminal:
 python -m pip install matplotlib
 ```
 
-Arrange the files like this (the project folder can be anywhere on your computer):
+Arrange the files like this (the project folder can be anywhere on ones computer):
 
 ```text
 PRA2003/
@@ -63,7 +67,7 @@ PRA2003/
     └── output-Set10.txt
 ```
 
-**Input data:** The original simulation files (`output-Set1.txt` through `output-Set10.txt`) are not included in this repository due to their size. To reproduce the analysis, obtain these files from the PRA2003 course dataset and place them in the `data/` folder shown above. Alternatively, the files can be placed directly beside `PRA2003_Final_Code.py`.
+**Input data:** The original simulation files (`output-Set1.txt` through `output-Set10.txt`) are not included in this repository due to their size. To reproduce the analysis, one can obtain these files from the PRA2003 course content and place them in the `data/` folder shown above. Alternatively, the files can be placed directly beside `PRA2003_Final_Code.py`.
 
 The generated figures and CSV results are included in the repository, so they can be viewed without rerunning the analysis.
 
@@ -135,7 +139,7 @@ s_d=\sqrt{\frac{\sum_{i=1}^{n}(d_i-\bar d)^2}{n-1}},\qquad
 \mathrm{SEM}=\frac{s_d}{\sqrt n},\quad n=10.
 $$
 
-The **SD** describes the observed variation among subsamples; the **SEM** estimates the uncertainty of their mean. These are different quantities and should not be labelled interchangeably.
+The **SD** describes the observed variation among subsamples; the **SEM** estimates the uncertainty of their mean. 
 
 ### 3. Momentum and momentum-dependent difference
 
@@ -163,9 +167,9 @@ This is a difference in **counts per subsample**, not a normalised ratio such as
 
 ### 4. Uncertainty and the presentation feedback
 
-The presentation calculated ten WT–variant count differences per momentum bin and displayed their **sample standard deviation (SD)** as error bars. That SD measures the variation observed between the ten subsamples; it was not a Poisson counting uncertainty.
+The presentation calculated ten WT–variant count differences per momentum bin and displayed their **sample standard deviation (SD)** as error bars. That SD measures the variation observed between the ten subsamples. It was not a Poisson counting uncertainty.
 
-The final code **keeps the same mean count difference**. The revised momentum plots instead show **Poisson counting uncertainty of the mean difference**. This correction follows the clarified assessor feedback: the histogram bins contain particle counts, so their error bars should use Poisson counting uncertainty rather than the sample SD of the ten subsample differences.
+The final code **keeps the same mean count difference**. The revised momentum plots instead show **Poisson counting uncertainty of the mean difference**. This correction follows the presentation feedback: the histogram bins contain particle counts, so their error bars should use Poisson counting uncertainty rather than the sample SD of the ten subsample differences.
 
 For *independent Poisson counts*, the variances add even though the counts are subtracted:
 
@@ -205,7 +209,7 @@ Overall paired WT–variant abundance differences (mean ± **sample SD**, per va
 | *M. tuberculosis* | 0.00044100 | 0.00048830 |
 | *S. enterica* | 0.00003554 | 0.00006859 |
 
-These values indicate that the WT strain had a higher **average** count per valid event in each pair, although the size of the difference relative to variation differs by species. This observation alone does not establish statistical or biological significance.
+These values indicate that the WT strain had a higher **average** count per valid event in each pair, although the size of the difference relative to variation differs by species. 
 
 ### Figures to examine first
 
@@ -221,7 +225,7 @@ The images are included directly in the GitHub repository and linked using relat
 
 ![S. pneumoniae WT–variant momentum difference](asymmetry_3122_-3122.png)
 
-Both use mean WT - variant counts with Poisson error bars. At low momentum the differences are generally larger; at higher momentum they tend towards zero. This describes the simulated data, not a demonstrated biological mechanism.
+Both use mean WT - variant counts with Poisson error bars. At low momentum the differences are generally larger, while at higher momentum they tend towards zero. 
 
 ## Discussion
 
