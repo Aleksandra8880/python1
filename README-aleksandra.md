@@ -96,29 +96,29 @@ Global significant asymmetry above 3 sigma was observed for all 6 pairs.
 
 ---
 
-![Graph 1](1.png)
+![Graph 1](211f.png)
 
 *The fitting for E.coli(221, -211) was one of the best obtained. Its population was the most abundant within the samples, therefore 60 bins of width 1 were chosen to represent such big amounts of points realiably . The exponential decay trend can be observed with the highest points above 2000 difference in counts per bin. The “guessvector” given to scipy was: [2800, 02] . Significant asymmetry can be observed on nearly the whole momentum spectrum. The most visible asymmetry is within the lower momentum range with the indicated decaying trend towards the higher momentum aptitudes. There are some points which do not match the trend, such as 5,6 kgm/s . The residual plot provides information how the curve fits the data and in this case it does so quite well.*
 
-![Graph 2](2.png)
+![Graph 2](321f.png)
 
-*The second pair Bacillus(321, -321) subtilis is the worst fitting. Here the exponential clearly does not match the data.*
+*The second pair Bacillus(321, -321) subtilis has significant oscillations in how the fit matches the date. The residuals indicate it with the exchanging positive and negative values.*
 
-![Graph 3](3.png)
+![Graph 3](2212f.png)
 
 *Pseudomonas aeruginosa (2212, -2212). The population was similar to Bacillus, therefore the same bin settings were used. Again, major asymmetry can be observed over the lower momentum values. The exponentially decaying curve matches the data well, and substantial residuals are only present in the lower momentum range(around 4 kgm/s and 7 kgm/s).*
 
-![Graph 4](4.png)
+![Graph 4](3122f.png)
 
 *For Streptococcus pneumoniae(3122, -3122) different bin widths were implemented - width 4. The population is much smaller, therefore collecting enough data within the bins was crucial to make the analysis feasible. Visually the exponential curve matches the datapoints. However, the residual plot signifies oscillation with positive and negative contributions. It is a big indicator that the performed fitting might not represent the data well.*
 
-![Graph 5](6.png)
+![Graph 5](3312f.png)
 
 *Next investigated bacteria was Mycobacterium tuberculosis(3312, -3312). Bin width was again 4 and the data and fit resemble Streptococcus pneumoniae. The residuals suggest that the fitting is not truly accurate.*
 
-![Graph 6](7.png)
+![Graph 6](3334f.png)
 
-*Discussing the last investigated bacteria strains pair, namely Salmonella (3334, -3334) the decaying exponential does not represent the data. The performed fitting was unsuccessful, which is greatly visible from the residuals analysis. For the future polynomial fitting could be a good alternative to account for the trend.*
+*Discussing the last investigated bacteria strains pair, namely Salmonella (3334, -3334) the decaying exponential again does not represent the data perfectly. For the future polynomial fitting could be a good alternative to account for the trend.*
 
 
 ## Questions to address: ##
