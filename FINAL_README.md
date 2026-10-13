@@ -1,6 +1,6 @@
 # Monitoring Bacterial Movement and Populations
 
-**PRA2003 — Python Group 1**
+**PRA2003 - Python Group 1**
 
 This project analyses simulated bacterial tracking data to compare the abundance and momentum distributions of wild-type (WT) bacteria with their mutant or resistant variants. It uses ten subsamples to investigate whether differences are consistent across the data.
 
