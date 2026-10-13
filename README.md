@@ -21,7 +21,7 @@ Each experiment file consists of:
 
 ## Main Results
 
-This analysis evaluates the full dataset across subsamples (`output-Set1.txt` to `output-Set10.txt`) using the subsampling technique to determine the mean number of bacteria per event along with their statistical uncertainties[cite: 2].
+This analysis evaluates the full dataset across subsamples (`output-Set1.txt` to `output-Set10.txt`) using the subsampling technique to determine the mean number of bacteria per event along with their statistical uncertainties.
 
 ### Bacterial Counts per Event
 
@@ -44,7 +44,7 @@ This analysis evaluates the full dataset across subsamples (`output-Set1.txt` to
 
 ### Wild Type vs. Mutant Comparison & Asymmetry
 
-To assess asymmetry without assuming independence between strains, the difference ($\Delta = \langle\text{WT}\rangle - \langle\text{Mutant}\rangle$) was computed within each subsample batch, and the statistical uncertainty was determined from the spread across all subsamples[cite: 2].
+To assess asymmetry without assuming independence between strains, the difference ($\Delta = \langle\text{WT}\rangle - \langle\text{Mutant}\rangle$) was computed within each subsample batch, and the statistical uncertainty was determined from the spread across all subsamples.
 
 | Bacterial Species | Mean Asymmetry ($\langle\text{WT}\rangle - \langle\text{Mutant}\rangle$) | Uncertainty | Statistical Significance |
 | :--- | :---: | :---: | :---: |
@@ -62,7 +62,7 @@ To assess asymmetry without assuming independence between strains, the differenc
 
 ### Momentum-Dependent Asymmetry
 
-The differential asymmetry as a function of momentum magnitude ($p = \sqrt{p_x^2 + p_y^2 + p_z^2}$) was evaluated in uniform bins between $0$ and $60 \times 10^{-20}\ \text{kg}\cdot\text{m}/\text{s}$[cite: 2].
+The differential asymmetry as a function of momentum magnitude ($p = \sqrt{p_x^2 + p_y^2 + p_z^2}$) was evaluated in uniform bins between $0$ and $60 \times 10^{-20}\ \text{kg}\cdot\text{m}/\text{s}$.
 
 #### *E. coli* Momentum Distribution
 ![E. coli Momentum Asymmetry](E_coli_momentum_asymmetry.png)
@@ -87,11 +87,11 @@ The differential asymmetry as a function of momentum magnitude ($p = \sqrt{p_x^2
 ## Conclusions & Answers to Research Questions
 
 1. **What are the average counts and uncertainties?**  
-   - The average counts per event vary across strains, ranging from $\sim 20$ counts/event for *E. coli* down to $\sim 0.001$ counts/event for *S. enterica*, with statistical uncertainties calculated from the subsample spread[cite: 2].
+   - The average counts per event vary across strains, ranging from $\sim 20$ counts/event for *E. coli* down to $\sim 0.001$ counts/event for *S. enterica*, with statistical uncertainties calculated from the subsample spread.
 
 2. **Is there any asymmetry between normal and mutant strains?**  
-   - **Yes.**[cite: 5] A distinct, statistically significant positive asymmetry is observed in *E. coli*, *B. subtilis*, *P. aeruginosa*, and *S. pneumoniae*, where the wild type significantly outnumbers the mutant strain.  
+   - **Yes.** A distinct, statistically significant positive asymmetry is observed in *E. coli*, *B. subtilis*, *P. aeruginosa*, and *S. pneumoniae*, where the wild type significantly outnumbers the mutant strain.  
    - Conversely, *M. tuberculosis* and *S. enterica* are compatible with zero asymmetry within their statistical uncertainty.
 
 3. **Is there any asymmetry as a function of momentum?**  
-   - **Yes.**[cite: 5] The observed abundance asymmetry is strongly concentrated in the low-momentum region ($p \lesssim 15 \times 10^{-20}\ \text{kg}\cdot\text{m}/\text{s}$)[cite: 7, 8]. As momentum increases, the counts decrease and the absolute difference approaches zero[cite: 7, 8].
+   - **Yes.** The observed abundance asymmetry is strongly concentrated in the low-momentum region ($p \lesssim 15 \times 10^{-20}\ \text{kg}\cdot\text{m}/\text{s}$). As momentum increases, the counts decrease and the absolute difference approaches zero.
