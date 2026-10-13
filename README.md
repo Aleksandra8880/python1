@@ -26,22 +26,11 @@ The project will aim to answer the following questions:
 
 ## Analysis
 
-The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events(output-Set1.txt to output-Set10.txt), each of which was analysed separately. In total, 4,614,632 valid events were used in the analysis. An event was considered valid if it contained at least one of the 12 bacterial IDs included in the analysis.
-
-The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. $\bar{N}_i = N_{\text{strain},i} / N_{\text{valid},i}$ 
-
-The final average for each strain was calculated as the mean of the 10 sub sample averages. 
-$\bar{N} = \frac{1}{10}\sum_{i=1}^{10} \bar{N}_i$.
-
-The statistical uncertainty was estimated using the sub-sampling method, by calculating the standard deviation of the 10 subsample averages. we divide by 10-1= 9 because the mean is calculated from the same 10 values.
-$\sigma = \sqrt{\frac{1}{9}\sum_{i=1}^{10}(\bar{N}_i - \bar{N})^2}$. 
-
-For asymmetry, we focused on two species from our presentation, E. coli (211 / −211) and S. pneumoniae (3122 / −3122). to compare the wild type and mutant strains, the normalised asymmetry was calculated in each subsample.
-**A = (N_WT − N_mut) / (N_WT + N_mut)**
-asymmetry is +1 if there are only wild type bacteria, -1 if there are only mutants, and 0 if both are equally common. The final asymmetry is the mean of the 10 values and its uncertainty is the standard deviation. An asymmetry was called significant if it is more than 3σ away from zero.
-the asymmetry as a function of momentum of every bacterium was calculated:
-$p = \sqrt{p_x^2 + p_y^2 + p_z^2}$ 
-The momentum was then grouped into bins from 0 to 60. in every bin the asymmetry was calculated for each subsample; their plotted point is the mean of the 10 values and the standard deviation as the error bar. 
+The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each of which was analysed separately. In total, 4,614,632 valid events were used in the analysis. An event was considered valid if it contained at least one of the 12 bacterial IDs included in the analysis.
+ 
+The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. The final average for each strain was calculated as the mean of the 10 sub sample averages.
+ 
+The statistical uncertainty was estimated using the sub-sampling method, by calculating the standard deviation of the 10 subsample averages. 
 
 ## Results
 
@@ -64,7 +53,7 @@ The average number of bacteria per valid event and the statistical uncertainty f
 
 ## Wild type vs mutant comparison
 
-To compare the wild type and mutant strains was also calculated as: **difference= WT average - mutant average** The statistical uncertainty of each difference was calculated separately for each of the 10 sub-samples, the standard deviation of the 10 differences was used in the uncertainty.
+To compare the wild type and mutant strains was also calculated as: **difference= WT average - mutant average** The difference was calculated separately for each of the 10 sub-samples, the standard deviation of the 10 differences was used as the uncertainty.
 
 | Bacterial strains | Mean difference per valid event | Statistical uncertainty |
 |---|---:|---:|
