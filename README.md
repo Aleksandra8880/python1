@@ -55,8 +55,9 @@ To assess asymmetry without assuming independence between strains, the differenc
 | ***M. tuberculosis*** | 0.000440 | ± 0.000490 | Not Significant ($< 1\sigma$) |
 | ***S. enterica*** | 0.000035 | ± 0.000062 | Not Significant ($< 1\sigma$) |
 
+
 #### Overall Abundance Asymmetry Plot
-![Abundance Asymmetry](wt_mutant_differences.png)
+![Abundance Asymmetry](plots_results/wt_mutant_differences.png)
 
 ---
 
@@ -65,24 +66,22 @@ To assess asymmetry without assuming independence between strains, the differenc
 The differential asymmetry as a function of momentum magnitude ($p = \sqrt{p_x^2 + p_y^2 + p_z^2}$) was evaluated in uniform bins between $0$ and $60 \times 10^{-20}\ \text{kg}\cdot\text{m}/\text{s}$.
 
 #### *E. coli* Momentum Distribution
-![E. coli Momentum Asymmetry](E_coli_momentum_asymmetry.png)
+![E. coli Momentum Asymmetry](plots_results/E_coli_momentum_asymmetry.png)
 
 #### *B. subtilis* Momentum Distribution
-![B. subtilis Momentum Asymmetry](B_subtilis_momentum_asymmetry.png)
+![B. subtilis Momentum Asymmetry](plots_results/B_subtilis_momentum_asymmetry.png)
 
 #### *P. aeruginosa* Momentum Distribution
-![P. aeruginosa Momentum Asymmetry](P_aeruginosa_momentum_asymmetry.png)
+![P. aeruginosa Momentum Asymmetry](plots_results/P_aeruginosa_momentum_asymmetry.png)
 
 #### *S. pneumoniae* Momentum Distribution
-![S. pneumoniae Momentum Asymmetry](S_pneumoniae_momentum_asymmetry.png)
+![S. pneumoniae Momentum Asymmetry](plots_results/S_pneumoniae_momentum_asymmetry.png)
 
 #### *M. tuberculosis* Momentum Distribution
-![M. tuberculosis Momentum Asymmetry](M_tuberculosis_momentum_asymmetry.png)
+![M. tuberculosis Momentum Asymmetry](plots_results/M_tuberculosis_momentum_asymmetry.png)
 
 #### *S. enterica* Momentum Distribution
-![S. enterica Momentum Asymmetry](S_enterica_momentum_asymmetry.png)
-
----
+![S. enterica Momentum Asymmetry](plots_results/S_enterica_momentum_asymmetry.png)
 
 ## Conclusions & Answers to Research Questions
 
