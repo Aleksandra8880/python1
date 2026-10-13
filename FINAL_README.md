@@ -75,24 +75,24 @@ python PRA2003_Final_Code.py
 
 ### Where are the figures and CSV results?
 
-After running the script, two folders are created **beside the `.py` file** (not inside the `.py` file):
+When the Python script is run locally, it automatically creates two folders beside the script: `figures/` for the 24 PNG graphs and `results/` for the nine CSV tables.
+
+For the GitHub submission, the generated PNG and CSV files have been uploaded directly to the repository's main directory. The folder organisation on GitHub therefore differs slightly from the folders created by the script.
 
 ```text
 PRA2003/
 ├── PRA2003_Final_Code.py
-├── data/
-├── figures/                 ← 24 PNG graphs
-│   ├── momentum_211.png
-│   ├── momentum_-211.png
-│   ├── momentum_combined_211_-211.png
-│   ├── asymmetry_211_-211.png
-│   └── ...
-└── results/                 ← 9 CSV tables
-    ├── subsamples.csv
-    ├── abundance.csv
-    ├── differences.csv
-    ├── momentum_difference_211_-211.csv
-    └── ...
+├── FINAL_README.md
+├── asymmetry_211_-211.png
+├── asymmetry_3122_-3122.png
+├── momentum_211.png
+├── momentum_-211.png
+├── momentum_combined_211_-211.png
+├── momentum_difference_211_-211.csv
+├── abundance.csv
+├── differences.csv
+├── subsamples.csv
+└── ... other PNG and CSV files
 ```
 
 The 24 figures comprise 12 individual strain histograms, six combined WT-and-variant histograms and six momentum-dependent difference plots. The nine CSV files comprise three summary tables and six momentum-bin difference tables.
@@ -209,15 +209,17 @@ These values indicate that the WT strain had a higher **average** count per vali
 
 ### Figures to examine first
 
-The two figures below are the momentum-dependent comparisons for Python Group 1. They are linked using relative paths so they appear in VS Code's Markdown preview and on GitHub when the `figures/` folder is next to `README.md`.
+The following figures show the momentum-dependent WT–variant differences for the two bacterial species assigned to Python Group 1. Both figures were generated using Poisson counting uncertainty for the error bars.
+
+The images are included directly in the GitHub repository and linked using relative file paths, allowing them to be displayed without downloading or rerunning the analysis.
 
 **E. coli - WT versus mutant**
 
-![E. coli WT–mutant momentum difference](figures/asymmetry_211_-211.png)
+![E. coli WT–mutant momentum difference](asymmetry_211_-211.png)
 
 **S. pneumoniae - WT versus capsule-deficient variant**
 
-![S. pneumoniae WT–variant momentum difference](figures/asymmetry_3122_-3122.png)
+![S. pneumoniae WT–variant momentum difference](asymmetry_3122_-3122.png)
 
 Both use mean WT - variant counts with Poisson error bars. At low momentum the differences are generally larger; at higher momentum they tend towards zero. This describes the simulated data, not a demonstrated biological mechanism.
 
