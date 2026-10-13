@@ -1,7 +1,7 @@
 # Biology-Themed Project: Bacterial Movement and Populations
 ## Topic
 
-This project models how different bacterial species move and proliferate under specific nutrient or stress conditions
+This project models how different bacterial species move and proliferate under specific nutrient or stress conditions.
 
 The data come from simulated bacterial tracking experiments. Each simulation contains information about the number of bacteria observed, their 3D momentum  (`px`, `py`, and `pz`), and an ID corresponding to a specific bacterial strain or genetic variant.
 
@@ -27,8 +27,18 @@ The project will aim to answer the following questions:
 ## Analysis
 
 The full sample contained 5,000,000 events and was divided into 10 sub-samples of 500,000 events, each of which was analysed separately. In total, 4,614,632 valid events were used in the analysis.
+
+An event was considered valid if it contained at least one of the 12 recognised bacteria IDs and events and events without recognised IDs were excluded.
  
 The 10 files were analysed separately. For each bacterial strain, the total number of bacteria was counted and divided by the number of valid events in that file. The final average for each strain was calculated as the mean of the 10 sub sample averages.
+
+The average for each file was calculated as:
+
+$$
+\text{Average abundance} = \frac{\text{Number of bacteria}}{\text{Number of valid events}}
+$$
+
+The mean of the 10 file averages was calculated using `np.mean()`, and their sample standard deviation using `np.std(..., ddof=1)`
  
 The statistical uncertainty was estimated using the sub-sampling method, by calculating the standard deviation of the 10 subsample averages. 
 
@@ -55,7 +65,7 @@ The average number of bacteria per valid event and the statistical uncertainty f
 
 ## Wild Type vs Mutant Comparison
 
-To compare the wild type and mutant strains was also calculated as:
+To compare the wild type and mutant strains the difference was calculated as:
 **difference= WT average - mutant average** 
 The difference was calculated separately for each of the 10 sub-samples, the standard deviation of the 10 differences was used as the uncertainty.
 
@@ -68,7 +78,7 @@ The difference was calculated separately for each of the 10 sub-samples, the sta
 | M. tuberculosis WT vs mutant | 0.000441 | ± 0.000488 |
 | S. enterica WT vs mutant | 0.0000355 | ± 0.0000686 |
 
-All 6 species showed a positive mean difference, meaning the wild type bacteria were slightly more abundant then their corresponding mutants. 
+All 6 species showed a positive mean difference, meaning the wild type bacteria were slightly more abundant than their corresponding mutants. 
 
 ## Asymmetry as a Function of Momentum 
 The final part of the analysis investigated the difference between wild type and mutant bacteria and how it changes depending on their momentum.
@@ -84,7 +94,15 @@ $$
 The momentum values were then divided into bins between zero and 60 with E. coli having a bin width of 1 and S. pneumoniae of 2. Different bin width were used because E.coli was much more abundant then S. pneumoniae.
 
 ## Calculating the Asymmetry 
-for each momentum bin, the number of wild type and mutant bacteria was counted separately in each of the 10 files. The difference was then calculated so the final graph shows the mean WT/mutant difference across the 10 sub samples.
+For each momentum bin, the number of wild type and mutant bacteria was counted separately in each of the 10 files. The difference was then calculated so the final graph shows the mean WT/mutant difference across the 10 sub samples.
+
+The plotted mean difference for each momentum bin was calculated as:
+
+$$
+D = \frac{N_{WT} - N_{mutant}}{10}
+$$
+
+Here, N_WT and N_mutant are the total counts in that bin across all 10 files. A positive difference means more wild-type bacteria were counted.
 
 ## Statistical Uncertainty
 Following the feedback received after our presentation, Poisson uncertainties were used for the momentum histograms instead of the standard deviation across the 10 sub-samples.
@@ -93,7 +111,7 @@ $$
 \sigma = \sqrt{N}
 $$
 
-for the difference between two independent counts the authorities were combined.
+for the difference between two independent counts the uncertainties were combined.
 
 $$
 \sigma = \sqrt{N_{WT} + N_{mutant}}
@@ -108,12 +126,29 @@ $$
 These uncertainties were displayed as error bars using plt.errorbar().
 
 ## Momentum Analysis
-For E. coli, the WT–mutant difference was largest at the lowest momentum bins. As the momentum increase the difference generally decreased. A similar pattern was observed for S. pneumoniae.
-The error bars represent the Poisson uncertainty of the mean count difference in every momentum bin
+
+For E. coli, the WT–mutant difference was largest at the lowest momentum bins. As the momentum increased the difference generally decreased. A similar pattern was observed for S. pneumoniae.
+The error bars represent the Poisson uncertainty of the mean count difference in every momentum bin.
+
+### E. coli momentum plot
+
+![E. coli momentum plot](E._coli_momentum.png)
+
+**Figure 1:** Mean WT–mutant count difference against momentum for E. coli. The difference is largest at low momentum and generally decreases at higher momentum. Error bars show Poisson uncertainties.
+
+### S. pneumoniae momentum plot
+
+![S. pneumoniae momentum plot](S._pneumoniae_momentum.png)
+
+**Figure 2:** Mean WT–mutant count difference against momentum for S. pneumoniae. A similar decreasing trend is observed. Error bars show Poisson uncertainties.
 
 ## Discussion 
+
 The results show that wild type bacteria were generally more abundant than the mutant bacteria in the simulated data set. E. coli showing the largest difference in abundance.
-The momentum analysis showed the WT-mutant difference was not constant across momentum but showed larger differences at lower momentum, which normally decreased as the momentum increased.
+
+The momentum analysis showed the WT-mutant difference was not constant across momentum but showed larger differences at lower momentum, which generally decreased as the momentum increased.
+
+The plots show absolute count differences. Because the total number of bacteria also changes with momentum, a smaller difference does not necessarily imply a smaller relative asymmetry.
 
 ## Conclusion
 The analysis answered the three research questions by calculating the average abundance of each bacterial strain, comparing wild-type and mutant strains, and investigating how their differences change with momentum.
@@ -122,7 +157,7 @@ Overall, wild-type bacteria were slightly more abundant than their corresponding
 
 For E. coli and S. pneumoniae, the largest WT–mutant count differences were observed at lower momentum, with the differences generally decreasing as momentum increased.
 
-The statistical uncertainties were estimated using the sub-sampling method for average abundances and overall differences, and Poisson uncertainties for the momentum histograms
+The statistical uncertainties were estimated using the sub-sampling method for average abundances and overall differences, and Poisson uncertainties for the momentum histograms.
 
 ## Libraries used
 
