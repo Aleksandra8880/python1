@@ -148,8 +148,6 @@ The results show that wild type bacteria were generally more abundant than the m
 
 The momentum analysis showed the WT-mutant difference was not constant across momentum but showed larger differences at lower momentum, which generally decreased as the momentum increased.
 
-The plots show absolute count differences. Because the total number of bacteria also changes with momentum, a smaller difference does not necessarily imply a smaller relative asymmetry.
-
 ## Conclusion
 The analysis answered the three research questions by calculating the average abundance of each bacterial strain, comparing wild-type and mutant strains, and investigating how their differences change with momentum.
 
