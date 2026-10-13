@@ -80,6 +80,22 @@ As a part of investigation the weighted average was also calculated, taking the 
 ```python
 weights {'output-Set1.txt': 461368, 'output-Set2.txt': 461516, 'output-Set3.txt': 461343, 'output-Set4.txt': 461322, 'output-Set5.txt': 461498, 'output-Set6.txt': 461668, 'output-Set7.txt': 461532, 'output-Set8.txt': 461543, 'output-Set9.txt': 461513, 'output-Set10.txt': 461329}
 ```
+
+| Bacteria   | Asymmetry          | standard deviation   |
+|------------|------------------- |--------------------- |
+| 211,-211   |14914.6             |122.125               |
+| 321, -321  |2628.1              |51.265                |
+| 2212,-2212 |11024.6             |104.998               |
+| 3122,-3122 |2264.0              |47.58                 |
+| 3312,-3312 |203.5               |14.265                |
+| 3334,-3334 |16.4                |4.049                 |
+
+Global significant asymmetry above 3 sigma was observed for all 6 pairs.
+
+
+
+
+
 ## Questions to address: ##
 - What are the average counts of each bacterial strain and their statistical uncertainties? 
 - Is there any asymmetry between the normal and the mutant strain? 
