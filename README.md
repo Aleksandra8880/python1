@@ -239,3 +239,5 @@ The most important methodological correction concerns the error bars. In the pre
 ## Libraries
 
 `matplotlib` for figures; `pathlib` for portable file paths; `csv` for output tables; `math` for momentum and Poisson calculations; `statistics` for means and sample SD; and `collections.defaultdict` for momentum-bin counts.
+
+***Disclaimer***: Generative AI was used to assist with some of the more complex parts of the Python code, specifically some troubleshooting, improving the structure of the code and some calculations. However, the analysis, interpretation of the results, original drafts of code and final review of the code were done originally without LLM help.
