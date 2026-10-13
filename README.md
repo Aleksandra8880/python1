@@ -76,7 +76,11 @@ The analysis focused on  E. coli and S. pneumoniae.
 
 ## calculating momentum 
 For each bacterium the total momentum was calculated from three components. 
-$$ p = \sqrt{p_x^2 + p_y^2 + p_z^2} $$
+
+$$ 
+p = \sqrt{p_x^2 + p_y^2 + p_z^2} 
+$$
+
 The momentum values were then divided into bins between zero and 60 with E. coli having a bin width of 1 and S. pneumoniae of 2. Different bin width were used because E.coli was much more abundant then S. pneumoniae.
 
 ## calculating the asymmetry 
@@ -84,17 +88,23 @@ for each momentum bin, the number of wild type and mutant bacteria was counted s
 
 ## Statistical Uncertainty
 Following the feedback received after our presentation, Poisson uncertainties were used for the momentum histograms instead of the standard deviation across the 10 sub-samples.
+
 $$
 \sigma = \sqrt{N}
 $$
+
 for the difference between two independent counts the authorities were combined.
+
 $$
 \sigma = \sqrt{N_{WT} + N_{mutant}}
 $$
+
 Since the graph shows the mean difference across 10 sub samples the uncertainty was divided by 10.
+
 $$
 \sigma_{\text{mean}} = \frac{\sqrt{N_{WT} + N_{mutant}}}{10}
 $$
+
 These uncertainties were displayed as error bars using plt.errorbar().
 
 ## momentum analysis
