@@ -58,27 +58,21 @@ Analyzed files were downloaded from: [link](https://surfdrive.surf.nl/index.php/
 - Salmonella mutant
 
 ## Research outcomes:
-```text
-For 211 the average from all files is 19.96404222526273 with standard deviation 0.03277297367603035
-For -211 the average from all files is 19.931721898491062 with standard deviation 0.031862995623137325
-For 321 the average from all files is 2.5109760539147103 with standard deviation 0.004760470013110587
-For -321 the average from all files is 2.505280866934113 with standard deviation 0.005510374977956562
-For 2212 the average from all files is 1.2089141646344372 with standard deviation 0.0019158652790257896
-For -2212 the average from all files is 1.1850237360153653 with standard deviation 0.002419119037614167
-For 3122 the average from all files is 0.276800090574915 with standard deviation 0.0010762078233972018
-For -3122 the average from all files is 0.2718939099983327 with standard deviation 0.0009852549484234705
-For 3312 the average from all files is 0.039469937734426135 with standard deviation 0.0002835326780196851
-For -3312 the average from all files is 0.03902893521802833 with standard deviation 0.00040171753717196235
-For 3334 the average from all files is 0.001187962955206821 with standard deviation 4.1700896418102735e-05
-For -3334 the average from all files is 0.0011524239744295493 with standard deviation 5.083297255816441e-05
+| Bacteria   | Average per event  | standard deviation   |
+|------------|------------------- |--------------------- |
+| 211        |19.96404222526273   |0.03277297367603035   |
+|-211        |19.931721898491062  |0.031862995623137325  |
+| 321        |2.5109760539147103  |0.004760470013110587  |
+| -321       |2.505280866934113   |0.005510374977956562  |
+| 2212       |1.2089141646344372  |0.0019158652790257896 |
+| -2212      |1.1850237360153653  |0.002419119037614167  |
+| 3122       |0.276800090574915   |0.0010762078233972018 |
+| -3122      |0.2718939099983327  |0.0009852549484234705 |
+| 3312       |0.039469937734426135|0.0002835326780196851 |
+| -3312      |0.03902893521802833 |0.00040171753717196235|
+| 3334       |0.001187962955206821|4.1700896418102735e-05|
+| -3334      |0.001152423974429549|5.083297255816441e-05 |
 
-Assymetry of pair (211, -211) is 0.0008101192565559722 
-Assymetry of pair (321, -321) is 0.0011353459502695781
-Assymetry of pair (2212, -2212) is 0.009979552357054559
-Assymetry of pair (3122, -3122) is 0.008941560453470589
-Assymetry of pair (3312, -3312) is 0.00561794710944335
-Assymetry of pair (3334, -3334) is 0.01518508769949144
-```
 The wild strains are more present within the population.
 
 As a part of investigation the weighted average was also calculated, taking the event_count of each file as a weight. However, the difference between the averages was not significant. The analyzed sub-samples were all similar size, therefore this simplification is reasonable and supports the expected outcomes.
